@@ -1,0 +1,30 @@
+'''
+pip install -U dash==0.19.0
+pip install -U dash-core-components==0.16.0rc1
+pip install -U dash-html-components==0.9.0rc1
+pip install -U dash-renderer==0.13.0rc2
+pip install -U dash-table-experiments==0.6.0rc1
+'''
+
+
+pip install -U dash
+pip install -U dash-core-components
+pip install -U dash-html-components
+pip install -U dash-renderer
+pip install -U dash-table-experiments
+
+
+'''
+Check versions:
+import dash
+import dash_core_components
+import dash_html_components
+import dash_renderer
+import dash_table_experiments
+
+dash.__version__
+dash_core_components.__version__
+dash_html_components.__version__
+dash_renderer.__version__
+dash_table_experiments.__version__
+'''

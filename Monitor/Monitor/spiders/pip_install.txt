@@ -1,0 +1,5 @@
+pip install pysqlite2
+pip install selenium
+pip install scrapy
+pip install pdfkit
+pip install weasyprint
