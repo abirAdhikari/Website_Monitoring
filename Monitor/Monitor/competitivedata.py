@@ -11,7 +11,7 @@ import sqlite3
 from datetime import datetime, timedelta, date
 
 
-db_file = os.getcwd() + '\\spiders\\sqlDb\\competitiondatabase.db'
+db_file = os.getcwd() + '\\spiders\\sql\\competition.db'
 
 class CompetitiveData(object):
 
