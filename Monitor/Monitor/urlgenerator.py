@@ -40,18 +40,7 @@ class UrlGenerator(object):
             self._getmecab_df    = self.init_getmecab_routes()
             self._hippocabs_df   = self.init_hippocabs_routes()
             
-        def init_gozo_routes(self):
-            gozo_input_json = os.getcwd() + '.\\spiders\\resources\\served_cities_gozo.json'    
-            with open(gozo_input_json) as gozo_data_file: 
-                gozo_content = gozo_data_file.read()
-            gozo_content = '[' + gozo_content + ']'
-            gozo_content = json.loads(gozo_content)
-            gozo_df = pd.DataFrame(json_normalize(gozo_content))
-            gozo_df = gozo_df.drop_duplicates()
-            gozo_df['city_name'] = gozo_df.text.str.split(',', 1)
-            gozo_df[['city_name','state']] = pd.DataFrame(gozo_df.city_name.values.tolist(), index= gozo_df.index)
-            gozo_df['state'] = gozo_df.state.str.strip(' ')
-            return gozo_df.reset_index()
+       
         
         def find_city_name(x):
             gozoLoc = self.Instance._gozo_df.loc[x]
