@@ -96,4 +96,5 @@ For some websites which uses javascript you need to install docker and run the s
 ### Bugs
 -----
 Makemytrip scrapy is not working currently as the urlgenerator for mmt is not updated. Issue is occuring due to some changes done in the mmt website. Patch will be updated soon.
+####Change all the names Hawkeye to Monitor
 
