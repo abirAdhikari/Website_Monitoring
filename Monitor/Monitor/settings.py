@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Hawkeye'
+BOT_NAME = 'Monitor'
 
-SPIDER_MODULES = ['Hawkeye.spiders']
-NEWSPIDER_MODULE = 'Hawkeye.spiders'
+SPIDER_MODULES = ['Monitor.spiders']
+NEWSPIDER_MODULE = 'Monitor.spiders'
 
 DOWNLOAD_DELAY = 3
 RANDOMIZE_DOWNLOAD_DELAY = True
@@ -22,11 +22,9 @@ SPLASH_URL = 'http://localhost:8050/'
 #RETRY_HTTP_CODES = [500, 502, 504, 400, 403, 404, 408]
 
 DOWNLOADER_MIDDLEWARES = {
-    'Hawkeye.middlewares.CheckIfAlreadyAvailableMiddleware': 100,
+    'Monitor.middlewares.CheckIfAlreadyAvailableMiddleware': 100,
     'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
-    'Hawkeye.middlewares.RotateUserAgentMiddleware': 400,
-    #'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
-    #'Hawkeye.middlewares.ProxyMiddleware': 150,
+    'Monitor.middlewares.RotateUserAgentMiddleware': 400
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
@@ -34,7 +32,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 
 
-#PROXY_LIST = 'D:\\AbirHawkeye\\Hawkeye\\Hawkeye\\List.txt'
+
 
 
 SPIDER_MIDDLEWARES = {
@@ -59,7 +57,7 @@ JSONRPC_PORT=[6080, 7030]
 JSONRPC_HOST='127.0.0.1'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Hawkeye (+http://www.yourdomain.com)'
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
